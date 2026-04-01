@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Bets movies of the greatest directors</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="grid-con" id="app">
+        <div class="col-span-full m-col-start-1 m-col-end-13">
+            <h2>My Favorite Movies</h2>
+            <p>welcome to my page of my favorite movies!</p>
+            <div v-if="loadingMovies">
+                <img class="loader" src="images/spinner-double.svg" alt="Loading Movies">
+            </div>
+            <ul id="movie-list" v-else>
+                <li v-for="" :key="">
+                    <h3>
+                        Title:
+                        <button @click="">
+                            {{}}
+                        </button>
+                    </h3>
+                </li>
+            </ul>
+        </div>
+        <div class="col-span-full m-col-start-1 m-col-end-13" ref="movieInfoCon">
+            <div v-if="loadingMovieDetails">
+                <img class="loader" src="images/spinner-double.svg" alt="Loading Movie Details">
+            </div>
+            <div v-else-if="error">
+                {{error}}
+            </div>
+            <div v-else-if="selectedMovie" id="info-box">
+                <!-- <img :src="" :alt=""> -->
+                <p>
+                    <span class="title">Title:</span>
+                    {{selectedMovie.title}}
+                </p>
+                <p>
+                    <span class="title">Director:</span>
+                    {{selectedMovie.director}}
+                </p>
+                <!-- <p>
+                    <span class="title"></span>
+                    {{}}
+                </p> -->
+            </div>
+        </div>
+        <footer class="col-span-full"></footer>
+    </div>
+</body>
+
+</html>
