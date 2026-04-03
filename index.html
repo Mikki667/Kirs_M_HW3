@@ -15,9 +15,11 @@
 
 <body>
     <div class="grid-con" id="app">
-        <div class="col-span-full m-col-start-1 m-col-end-13">
+        <div class="col-span-full intro">
             <h2>My Favorite Movies</h2>
             <p>welcome to my page of my favorite movies!</p>
+        </div>
+        <div class="col-span-full m-col-span-7 l-col-span-8 movie-list-con">
             <div v-if="loadingMovies">
                 <img class="loader" src="images/spinner-double.svg" alt="Loading Movies">
             </div>
@@ -32,7 +34,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-span-full m-col-start-1 m-col-end-13" ref="movieInfoCon">
+        <div class="col-span-full m-col-span-5 l-col-span-4 movie-info" ref="movieInfoCon">
             <div v-if="loadingMovieDetails">
                 <img class="loader" src="images/spinner-double.svg" alt="Loading Movie Details">
             </div>
