@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Bets movies of the greatest directors</title>
+    <title>Best Movies Of The Greatest Directors API</title>
     <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -14,6 +14,39 @@
 </head>
 
 <body>
+
+    <h1 class="hidden">Welcome to the Best Movies Of The Greatest Directors API!</h1>
+
+    <header class="main-header">
+        <section class="grid-con header-row">
+            <div class="header-brand">
+                <h2 class="header-name">Best Movies API</h2>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="main-nav">
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#movie-main">Movie List</a></li>
+                </ul>
+            </nav>
+
+            <button id="hamburger">&#9776;</button>
+        </section>
+    </header>
+
+    <div id="menu" class="overlay">
+        <button id="close">&times;</button>
+
+        <nav>
+            <ul>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#movie-main">Movie List</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <br>
+
     <section class="col-span-full about-section">
         <h2 class="hidden">About The Project</h2>
         <div class="grid-con">
@@ -56,7 +89,7 @@
         </div>
 
     </section>
-    <section class="movie-section">
+    <section class="movie-section" id="movie-main">
         <div class="grid-con" id="app">
             <div class="col-span-full m-col-span-7 l-col-span-8 movie-list-con">
                 <div v-if="loadingMovies">

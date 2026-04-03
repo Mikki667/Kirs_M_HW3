@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as *;
+
+.main-header {
+    background-color: $primary-color;
+    padding: $space-md 0;
+    margin: 0;
+    box-shadow: 0 6px 18px $shadow-color;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+}
+
+.header-name {
+    color: $text-color;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.main-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: $space-lg;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+#hamburger {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#hamburger:hover {
+    opacity: 0.7;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: $text-color;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.overlay.open {
+    display: flex;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+}
+
+.overlay ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.overlay li {
+    margin: 20px 0;
+}
+
+.overlay a {
+    color: $text-color;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.overlay a:hover {
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 768px) {
+    .desktop-nav {
+        display: block;
+   }
+
+    #hamburger {
+        display: none;
+    }
+}
