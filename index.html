@@ -40,7 +40,7 @@
                 {{error}}
             </div>
             <div v-else-if="selectedMovie" id="info-box">
-                <!-- <img :src="" :alt=""> -->
+                <img :src="`http://127.0.0.1:8000/${selectedMovie.image_url}`" :alt="selectedMovie.poster">
                 <p>
                     <span class="title">Title:</span>
                     {{selectedMovie.title}}

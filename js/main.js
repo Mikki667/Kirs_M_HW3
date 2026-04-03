@@ -55,7 +55,7 @@ const app = Vue.createApp({
                     title: movieData.title || "Not available",
                     director: movieData.director?.name || "Not available",
                     //description: movieData.description || "Not available",
-                    //image_url: movieData.image_url || ""
+                    image_url: movieData.image_url || ""
                 }
 
                 this.$nextTick(()=> {
