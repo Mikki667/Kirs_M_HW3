@@ -26,7 +26,6 @@
             <ul id="movie-list" v-else>
                 <li v-for="movie in moviesData" :key="movie.id">
                     <h3>
-                        Title:
                         <button @click="getMovie(movie.id)">
                             {{movie.title}}
                         </button>
