@@ -366,4 +366,44 @@
   .footer-info {
     text-align: center;
   }
+}
+.hero-section {
+  background-image: url("../images/movie-hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+}
+
+.hero-content h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: url("../images/movie_hero_mobile.jpg");
+  }
+  .hero-content {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.loader {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
