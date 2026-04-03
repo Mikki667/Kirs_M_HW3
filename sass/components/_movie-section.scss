@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.movie-section {
+    background-color: $primary-color;
+    padding-top: $space-lg;
+    padding-bottom: $space-lg;
+}

@@ -14,50 +14,48 @@
 </head>
 
 <body>
-    <div class="grid-con" id="app">
-        <div class="col-span-full intro">
-            <h2>My Favorite Movies</h2>
-            <p>welcome to my page of my favorite movies!</p>
+    <section class="movie-section">
+        <div class="grid-con" id="app">
+            <div class="col-span-full m-col-span-7 l-col-span-8 movie-list-con">
+                <div v-if="loadingMovies">
+                    <img class="loader" src="images/spinner-double.svg" alt="Loading Movies">
+                </div>
+                <ul id="movie-list" v-else>
+                    <li v-for="movie in moviesData" :key="movie.id">
+                        <h3>
+                            <button @click="getMovie(movie.id)">
+                                {{movie.title}}
+                            </button>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-full m-col-span-5 l-col-span-4 movie-info" ref="movieInfoCon">
+                <div v-if="loadingMovieDetails">
+                    <img class="loader" src="images/spinner-double.svg" alt="Loading Movie Details">
+                </div>
+                <div v-else-if="error">
+                    {{error}}
+                </div>
+                <div v-else-if="selectedMovie" id="info-box">
+                    <img :src="`http://127.0.0.1:8000/${selectedMovie.image_url}`" :alt="selectedMovie.poster">
+                    <p>
+                        <span class="title">Title:</span>
+                        {{selectedMovie.title}}
+                    </p>
+                    <p>
+                        <span class="title">Director:</span>
+                        {{selectedMovie.director}}
+                    </p>
+                    <!-- <p>
+                        <span class="title"></span>
+                        {{}}
+                    </p> -->
+                </div>
+            </div>
+
         </div>
-        <div class="col-span-full m-col-span-7 l-col-span-8 movie-list-con">
-            <div v-if="loadingMovies">
-                <img class="loader" src="images/spinner-double.svg" alt="Loading Movies">
-            </div>
-            <ul id="movie-list" v-else>
-                <li v-for="movie in moviesData" :key="movie.id">
-                    <h3>
-                        <button @click="getMovie(movie.id)">
-                            {{movie.title}}
-                        </button>
-                    </h3>
-                </li>
-            </ul>
-        </div>
-        <div class="col-span-full m-col-span-5 l-col-span-4 movie-info" ref="movieInfoCon">
-            <div v-if="loadingMovieDetails">
-                <img class="loader" src="images/spinner-double.svg" alt="Loading Movie Details">
-            </div>
-            <div v-else-if="error">
-                {{error}}
-            </div>
-            <div v-else-if="selectedMovie" id="info-box">
-                <img :src="`http://127.0.0.1:8000/${selectedMovie.image_url}`" :alt="selectedMovie.poster">
-                <p>
-                    <span class="title">Title:</span>
-                    {{selectedMovie.title}}
-                </p>
-                <p>
-                    <span class="title">Director:</span>
-                    {{selectedMovie.director}}
-                </p>
-                <!-- <p>
-                    <span class="title"></span>
-                    {{}}
-                </p> -->
-            </div>
-        </div>
-        <footer class="col-span-full"></footer>
-    </div>
+    </section>
 </body>
 
 </html>
