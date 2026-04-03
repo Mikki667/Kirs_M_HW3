@@ -56,3 +56,20 @@
   background-color: #ec5eff;
   border-radius: 8px;
 }
+
+@media (max-width: 767px) {
+  .movie-list-con {
+    width: 90%;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: $space-md;
+  }
+
+  #movie-list h3 {
+    font-size: 20px;
+  }
+
+  #movie-list button {
+    font-size: 16px;
+  }
+}

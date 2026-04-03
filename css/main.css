@@ -53,8 +53,22 @@
   border-radius: 8px;
 }
 
+@media (max-width: 767px) {
+  .movie-list-con {
+    width: 90%;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  #movie-list h3 {
+    font-size: 20px;
+  }
+  #movie-list button {
+    font-size: 16px;
+  }
+}
 .movie-info {
-  background-color: #4b2e83;
+  background-color: #6a4fb3;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -118,4 +132,9 @@
   #info-box p {
     font-size: 16px;
   }
+}
+.movie-section {
+  background-color: #4b2e83;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */
