@@ -144,6 +144,18 @@ In this commit I added some GreenSock animations for the main sections of the pa
 
 In this commit I added my readme file that I was working on throughout the process of doing both of the assignments for both of the classes. 
 
+# Update: JavaScript
+
+In this commit I added The Smooth Scroll that I had previously used in my assignments. 
+
+# Update: CSS
+
+In this commit I added new Google Fonts and applied them to the project to improve the overall look of the text and the page
+
+# README file Update
+
+Adding last commit changes
+
 ---
 
 ## Installation  
