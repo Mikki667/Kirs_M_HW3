@@ -68,9 +68,9 @@ export function MoviesApp() {
 
                         gsap.from(this.$refs.movieInfoCon, {
                             opacity: 0,
-                            y: 20,
-                            duration: 2,
-                            ease: "power2.out"
+                            y: 30,
+                            duration: 1,
+                            ease: "power1.out"
                         })
                     })
                 })
