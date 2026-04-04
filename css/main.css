@@ -1,3 +1,11 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, button {
+  font-family: "Playfair Display", serif;
+}
+
 .movie-list-con {
   background-color: #ffffff;
   padding: 40px;
@@ -49,7 +57,7 @@
 
 #movie-list button:hover {
   color: #ffffff;
-  background-color: #ec5eff;
+  background-color: #6a4fb3;
   border-radius: 8px;
 }
 
